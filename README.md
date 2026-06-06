@@ -11,6 +11,7 @@ Un framework nativo en Python orientado a objetos para realizar Análisis de Cic
 ## Requisitos
 * Python 3.9 o superior
 * openLCA 2.x con el servidor IPC activado (por defecto en el puerto 8080)
+* Cargar tu txt con los descriptores de la base de datos que usaras: Name, ID, Ubi
 
 ## Instalación
 
