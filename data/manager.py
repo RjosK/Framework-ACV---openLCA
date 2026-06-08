@@ -36,12 +36,8 @@ class MaterialManager:
                 material = parts[1] if len(parts) > 1 else raw_name
                 
                 cat = str(row['categoria'])
-                # Tomar solo la última parte de la categoría si es muy larga para no saturar la UI
-                short_cat = cat.split('/')[-1] if '/' in cat else cat
-                
-                # Crear el string rico: Proveedor | Material | Ubicación | ID
-                # Usaremos " || " para separar los bloques visualmente
-                display_str = f"{provider} || {material} || {short_cat} || {row['id']}"
+                # Eliminamos la categoría del string visual para evitar confundirla con la ubicación.
+                display_str = f"{provider} || {material} || {row['id']}"
                 display_names.append(display_str)
                 
             self.materials_df['display_name'] = display_names
